@@ -1,0 +1,34 @@
+@startuml
+
+Class Personal{
+	-exporter
+	-socios
+	--
+	--
+	+calcularSueldo():Float
+	+descuento()
+} 
+Class Temporario{
+	--
+	--
+	+calcularSueldo():Float
+	-adicional():Float
+}
+Class Pasante{
+	+calcularSueldo():Float
+	-adicional():Float
+	}
+Class Planta{
+	+calcularSueld():Float
+	-adicional(Socio):Float
+	}
+
+note left of Temporario::calcularSueldo(): 
+	basico+adicional-descuento
+end note
+
+	Personal <|-- Temporario
+	Personal <|-- Pasante
+	Personal <|-- Planta
+
+@enduml

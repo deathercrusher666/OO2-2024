@@ -1,0 +1,45 @@
+@startuml
+
+Class Jugada{
+	+{abstract} recibirJugada(Jugada recibida): String
+	+{abstract} jugarContraTijera(): String
+	+{abstract} jugarContraPiedra(): String
+	+{abstract} jugarContraPapel(): String
+} 
+Class Piedra{
+	+recibirJugada(Jugada recibida): String	
+	+jugarContraPiedra(): String
+	+jugarContraPapel(): String
+	+jugarContraTijera(): String
+}
+Class Papel{
+	+recibirJugada(Jugada recibida): String	
+	+jugarContraPiedra(): String
+	+jugarContraPapel(): String
+	+jugarContraTijera(): String
+	}
+Class Tijera{
+	+recibirJugada(Jugada recibida): String	
+	+jugarContraPiedra(): String
+	+jugarContraPapel(): String
+	+jugarContraTijera(): String
+}
+Class Lagarto{
+	+recibirJugada(Jugada recibida): String	
+	+jugarContraPiedra(): String
+	+jugarContraPapel(): String
+	+jugarContraTijera(): String
+}
+Class Spock{
+	+recibirJugada(Jugada recibida): String	
+	+jugarContraPiedra(): String
+	+jugarContraPapel(): String
+	+jugarContraTijera(): String
+}
+Jugada <|-- Piedra
+Jugada <|-- Papel
+Jugada <|-- Tijera
+Jugada <|-- Spock
+Jugada <|-- Lagarto
+
+@enduml

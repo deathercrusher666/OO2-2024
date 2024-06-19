@@ -1,0 +1,24 @@
+@startuml
+
+Class Twitter {
+	-existsUser(String screenName)
+	+createUser(String screenName)
+	+deleteUser(String screenName)
+} 
+Class User{
+	-screenName
+	+tweet(String text)
+	+retweet(Tweet retuit)
+	+nombre() :String
+}
+Class Tweet{	
+	-String text
+	}
+Class Retweet{
+	-origin
+}
+Twitter "-users" --> "*" User
+User "tweets" *-- "owner" Tweet
+Retweet --> "origin" Tweet
+Retweet --|> Tweet
+@enduml
